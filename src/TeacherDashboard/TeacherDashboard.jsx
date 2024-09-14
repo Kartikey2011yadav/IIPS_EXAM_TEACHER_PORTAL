@@ -7,7 +7,7 @@ const TeacherDashboard=()=>
 {
     return(
         <div style={{overflowX:"hidden"}}>
-            <Navbar/>
+            <Navbar name='Teacher'/>
              <Papers/>
             
         </div>

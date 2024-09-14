@@ -4,9 +4,10 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { FaPowerOff } from "react-icons/fa";
 import "./Navbar.css";
 
-const Navbar = () => {
+function Navbar ({name = "Nishant Kaushal"}) {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+  const username = name; 
   const location = useLocation();
   const responsive = () => {
     const sidebar = document.getElementsByClassName("navbar-sidebar")[0];
@@ -35,7 +36,7 @@ const Navbar = () => {
             width="35"
             height="35"
           />
-          <div>Nishant Kaushal</div>
+          <div>{username}</div>
         </div>
         <div className="navbar-contents navbar-displayed">
 
@@ -136,6 +137,6 @@ const Navbar = () => {
       </div>
     </>
   );
-};
+}
 
 export default Navbar;
